@@ -1,5 +1,5 @@
 import { VideoPlayer, VideoView } from "expo-video";
-import { ImageBackground, Text, View, StyleSheet, ActivityIndicator } from "react-native";
+import { ImageBackground, View, StyleSheet, ActivityIndicator } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { router } from "expo-router";
 import { useState } from "react";
@@ -33,7 +33,7 @@ export default function MediaHeader(props: MediaHeaderProps) {
         player={trailerPlayer}
         onFirstFrameRender={() => setIsTrailerLoading(false)}
       />
-      <VideoView 
+      <VideoView
         ref={videoViewRef}
         player={mediaPlayer}
         onFullscreenExit={() => {
@@ -47,7 +47,7 @@ export default function MediaHeader(props: MediaHeaderProps) {
 
 const styles = StyleSheet.create({
   container: {
-    height: 226,
+    height: 230,
     width: '100%'
   },
   imageBackground: {

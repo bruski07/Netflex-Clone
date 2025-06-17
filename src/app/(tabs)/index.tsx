@@ -51,6 +51,13 @@ export default function HomeSceen() {
           <Text
             style={[
               styles.filterText,
+              activeFilter === 'ALL' && styles.activeFilter
+            ]}
+            onPress={() => setActiveFilter('ALL')}
+          >All</Text>
+          <Text
+            style={[
+              styles.filterText,
               activeFilter === 'TV_SERIES' && styles.activeFilter
             ]}
             onPress={() => setActiveFilter(prev => prev === 'TV_SERIES' ? 'ALL' : 'TV_SERIES')}
@@ -66,7 +73,6 @@ export default function HomeSceen() {
           >
             Movies
           </Text>
-          <Text style={styles.filterText}>Categories</Text>
         </View>
 
       </View>
