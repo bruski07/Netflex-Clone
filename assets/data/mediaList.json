@@ -5,31 +5,37 @@
     "data": [
       {
         "id": "media-1",
+        "title": "The Silent Operation",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie10.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-2",
+        "title": "Midnight Rescue",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie11.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-3",
+        "title": "Dark Horizon",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie12.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-4",
+        "title": "Code Alpha",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie15.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-5",
+        "title": "Urban Vendetta",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie17.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-6",
+        "title": "The Final Escape",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie14.jpg",
         "type": "MOVIE"
       }
@@ -41,26 +47,31 @@
     "data": [
       {
         "id": "media-7",
+        "title": "Empire of Lies",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie6.jpg",
         "type": "TV_SERIES"
       },
       {
         "id": "media-8",
+        "title": "Silent Truths",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie7.jpg",
         "type": "TV_SERIES"
       },
       {
         "id": "media-9",
+        "title": "Shadow Pact",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie1.jpg",
         "type": "TV_SERIES"
       },
       {
         "id": "media-10",
+        "title": "Crimson Code",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie4.jpg",
         "type": "TV_SERIES"
       },
       {
         "id": "media-11",
+        "title": "Torn Realities",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie9.jpg",
         "type": "TV_SERIES"
       }
@@ -72,21 +83,25 @@
     "data": [
       {
         "id": "media-12",
+        "title": "Rogue State",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie13.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-13",
+        "title": "Memory Lane",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie8.jpg",
-         "type": "TV_SERIES"
+        "type": "TV_SERIES"
       },
       {
         "id": "media-14",
+        "title": "Aftershock",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie18.jpg",
         "type": "MOVIE"
       },
       {
         "id": "media-15",
+        "title": "Dead Zone",
         "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/netflix/movie16.jpg",
         "type": "MOVIE"
       }
