@@ -19,7 +19,7 @@ A modern, mobile-first Netflix clone built with React Native, Expo, TypeScript, 
 📦 Getting Started
 
 1. Clone the Repo
-git clone https://github.com/bruski07/netflix-clone-app.git
+git clone https://github.com/bruski07/Netflex-Clone.git
 cd netflix-clone-app
 
 2. Install Dependencies
