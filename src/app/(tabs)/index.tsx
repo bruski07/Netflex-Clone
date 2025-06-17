@@ -7,19 +7,27 @@ import Feather from '@expo/vector-icons/Feather';
 
 export default function HomeSceen() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeFilter, setActiveFilter] = useState<'ALL' | 'MOVIE' | 'TV_SERIES'>('ALL');
 
-  const displayedMediaList = searchQuery.trim()
-    ? mediaList
-      .map(section => ({
+
+
+
+  const displayedMediaList = mediaList
+    .map(section => {
+      const filteredItems = section.data.filter(item => {
+        const matchesTitle = (item.title || '').toLowerCase().includes(searchQuery.trim().toLowerCase());
+        const matchesType = activeFilter === 'ALL' || item.type === activeFilter;
+        return matchesTitle && matchesType;
+      });
+
+      return {
         ...section,
-        data: section.data.filter(item =>
-          (item.title || '').toLowerCase().includes(searchQuery.trim().toLowerCase())
-        )
-      }))
-      .filter(section => section.data.length > 0)
-    : mediaList;
+        data: filteredItems,
+      };
+    })
+    .filter(section => section.data.length > 0);
 
-  // If No Search Record Found
+  // If No Record Found
   const noResultsFound = searchQuery.trim() && displayedMediaList.length === 0;
 
 
@@ -38,11 +46,29 @@ export default function HomeSceen() {
           onChangeText={setSearchQuery}
           style={styles.searchInput}
         />
+
         <View style={styles.filterContainer}>
-          <Text style={styles.filterText}>TV Shows</Text>
-          <Text style={styles.filterText}>Movies</Text>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'TV_SERIES' && styles.activeFilter
+            ]}
+            onPress={() => setActiveFilter(prev => prev === 'TV_SERIES' ? 'ALL' : 'TV_SERIES')}
+          >
+            TV Shows
+          </Text>
+          <Text
+            style={[
+              styles.filterText,
+              activeFilter === 'MOVIE' && styles.activeFilter
+            ]}
+            onPress={() => setActiveFilter(prev => prev === 'MOVIE' ? 'ALL' : 'MOVIE')}
+          >
+            Movies
+          </Text>
           <Text style={styles.filterText}>Categories</Text>
         </View>
+
       </View>
 
       {noResultsFound && (
@@ -121,7 +147,10 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontSize: 14,
     fontStyle: 'italic',
+  },
+  activeFilter: {
+    backgroundColor: 'white',
+    color: 'black',
+    borderColor: 'white',
   }
-
-
 });
